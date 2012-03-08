@@ -1,3 +1,0 @@
-1. copy the jar to class path directory and need to refresh 
-WebContent\WEB-INF\lib in eclipse as well
-2. change database plz restart the server and browser
