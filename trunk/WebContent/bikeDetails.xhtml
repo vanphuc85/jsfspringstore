@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+  <ui:composition template="shopTemplate.xhtml">
+       
+        <f:metadata>
+			<f:viewParam name="bikeId" value="#{bikeDetails.bikeId}"/>
+			<f:event type="preRenderView" listener="#{bikeDetails.loadBike}"/>
+		</f:metadata>
+       
+       
+        <ui:define name="content">
+        	<b><h:outputText value="#{msg['bikes.list.details']}"/></b><br/><br/>
+       		<h:outputText value="#{msg['bikes.list.name']}: "/><h:outputText value="#{bikeDetails.bike.name}" /><br/>
+       		<h:outputText value="#{msg['bikes.list.price']}: "/><h:outputText value="#{bikeDetails.bike.price}" /><br/>
+       		<h:outputText value="#{msg['bikes.list.discountprice']}: "/><h:outputText value="#{bikeDetails.bike.discountPrice}" rendered="#{bikeDetails.bike.discountPrice!=null}"/><br/>       		
+       		<h:outputText value="#{msg['bikes.list.description']}: "/><h:outputText value="#{bikeDetails.bike.description}" /><br/>
+        </ui:define>
+
+  </ui:composition>
+</html>
