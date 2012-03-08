@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+  <ui:composition template="../shopTemplate.xhtml">
+       
+        <ui:define name="content">
+        <h:form>
+        	<h:outputText value="#{msg['bikes.list.name']}: "/><h:inputText value="#{addBike.name}" /><br/>
+       		<h:outputText value="#{msg['bikes.list.price']}: "/><h:inputText value="#{addBike.price}" /><br/>
+       		<h:outputText value="#{msg['bikes.list.discountprice']}: "/><h:inputText value="#{addBike.discountPrice}" /><br/>       		
+       		<h:outputText value="#{msg['bikes.list.description']}: "/><h:inputText value="#{addBike.description}" /><br/>
+       		<h:commandButton action="#{addBike.addNewBike}" value="#{msg['bikes.add.button']}" />
+       	</h:form>
+        </ui:define>
+
+  </ui:composition>
+</html>
